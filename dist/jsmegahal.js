@@ -26,12 +26,12 @@
 
 
   jsMegaHal = (function() {
-    jsMegaHal.prototype.wordRegex = /[^a-zA-Z0-9:,'\u00C0-\u017F]+/;
+    jsMegaHal.prototype.wordRegex = /\s/;
 
     jsMegaHal.prototype.sentenceRegex = /[!?\.\n]/;
 
     /*
-    	@markov - the markov order to use for this jsMegaHal instance, defaults to 4
+    @markov - the markov order to use for this jsMegaHal instance, defaults to 4
     */
 
 
@@ -45,10 +45,10 @@
     }
 
     /*
-    	generate a number between min and max, inclusive
+    generate a number between min and max, inclusive
     
-    	@min the lower bound
-    	@max the upper bound
+    @min the lower bound
+    @max the upper bound
     */
 
 
@@ -57,9 +57,9 @@
     };
 
     /*
-    	a convenience method to add a quad to the quads list
+    a convenience method to add a quad to the quads list
     
-    	@quad the quad to add to the list
+    @quad the quad to add to the list
     */
 
 
@@ -70,9 +70,9 @@
     };
 
     /*
-    	add a lot of text and split it by sentence
+    add a lot of text and split it by sentence
     
-    	@longSentence a lot of text separated by characters in @sentenceRegex
+    @longSentence a lot of text separated by characters in @sentenceRegex
     */
 
 
@@ -84,10 +84,10 @@
     };
 
     /*
-    	add a sentence to jsMegaHal
+    add a sentence to jsMegaHal
     
-    	@sentence the sentence to add to jsMegaHal.
-    		ignored if there are fewer than @markov words in it
+    @sentence the sentence to add to jsMegaHal.
+      ignored if there are fewer than @markov words in it
     */
 
 
@@ -140,9 +140,9 @@
     };
 
     /*
-    	generate a reply from a sentence instead of just a word
+    generate a reply from a sentence instead of just a word
     
-    	@sentence the sentence to pick a token from
+    @sentence the sentence to pick a token from
     */
 
 
@@ -153,9 +153,9 @@
     };
 
     /*
-    	generate a reply from a single word
+    generate a reply from a single word
     
-    	@word the seed word, can be null/undefined
+    @word the seed word, can be null/undefined
     */
 
 
